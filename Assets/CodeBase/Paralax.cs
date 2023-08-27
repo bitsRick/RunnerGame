@@ -21,10 +21,8 @@ public class Paralax : MonoBehaviour
     {
         _positionX += _speed * Time.deltaTime;
 
-        if (_positionX >= 1)
-        {
+        if (_positionX >= 1) 
             _positionX = 0;
-        }
 
         _rawImage.uvRect = new Rect(_positionX,0,_rawImage.uvRect.width, _rawImage.uvRect.height);
     }

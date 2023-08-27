@@ -12,9 +12,11 @@ public class Enemy : MonoBehaviour
         if (collider2D.TryGetComponent<Player>(out Player player))
         {
             player.TakeDamage(_damage);
+            Destroy();
         }
-        
-        Destroy();
+
+        if (collider2D.TryGetComponent(out DestroyGameObject _destroyGameObject)) 
+            Destroy();
     }
 
     private void Destroy()

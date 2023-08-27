@@ -25,18 +25,18 @@ namespace CodeBase.UI
         {
             if (_listHeart.Count < healthCount)
             {
-                int healtToCreate = healthCount - _listHeart.Count;
+                int healthToCreate = healthCount - _listHeart.Count;
 
-                for (int i = 0; i < healtToCreate; i++)
+                for (int i = 0; i < healthToCreate; i++)
                 {
                     CreatedHeart();
                 }
             }
             else if (healthCount < _listHeart.Count)
             {
-                int healtToDestroy =  _listHeart.Count - healthCount;
+                int healthToDestroy =  _listHeart.Count - healthCount;
 
-                for (int i = 0; i < healtToDestroy; i++)
+                for (int i = 0; i < healthToDestroy; i++)
                 {
                     DestroyHeart(_listHeart[_listHeart.Count - 1]);
                 }

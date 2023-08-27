@@ -11,7 +11,7 @@ namespace CodeBase.Spawner
 
         private List<GameObject> _pool = new List<GameObject>();
 
-        protected void Inicilization(GameObject[] template)
+        protected void Initialization(GameObject[] template)
         {
             for (int i = 0; i < _capValue; i++)
             {
@@ -24,11 +24,12 @@ namespace CodeBase.Spawner
             }
         }
 
-        protected bool TryGetEnemy(out GameObject enemy)
+        protected bool TryGetObject(out GameObject template)
         {
-            enemy = _pool.FirstOrDefault(p => p.gameObject.activeSelf == false);
+            template = _pool.FirstOrDefault(
+                p => p.gameObject.activeSelf == false);
 
-            return enemy != null;
+            return template != null;
         }
     }
 }
